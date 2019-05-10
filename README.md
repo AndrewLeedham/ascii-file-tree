@@ -1,4 +1,4 @@
-[![npm package][npm-badge]][npm-link] [![license MIT][license-badge]][license] [![commit style angular][commit-style-badge]][commit-style-link] [![semantic-release][semantic-release-badge]][semantic-relase-link]
+[![travisci status][travisci-badge]][travisci-link] [![npm package][npm-badge]][npm-link] [![license MIT][license-badge]][license] [![commit style angular][commit-style-badge]][commit-style-link] [![semantic-release][semantic-release-badge]][semantic-relase-link]
 
 # ascii-file-tree
 Generate an ascii tree structure for a file glob pattern.
@@ -35,8 +35,8 @@ console.log(aft.generate());
 
 [issues]: https://github.com/AndrewLeedham/ascii-file-tree/issues
 
-[circleci-badge]: https://flat.badgen.net/circleci/github/AndrewLeedham/ascii-file-tree
-[circleci-link]: https://circleci.com/gh/AndrewLeedham/ascii-file-tree/tree/master
+[travisci-badge]: https://flat.badgen.net/travis/AndrewLeedham/ascii-file-tree
+[travisci-link]: https://travis-ci.org/AndrewLeedham/ascii-file-tree
 
 [npm-badge]: https://flat.badgen.net/npm/v/ascii-file-tree?color=cyan
 [npm-link]: https://www.npmjs.com/package/ascii-file-tree
