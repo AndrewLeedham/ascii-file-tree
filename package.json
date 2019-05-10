@@ -62,5 +62,8 @@
   "dependencies": {
     "ascii-tree": "^0.3.0",
     "fast-glob": "^2.2.6"
+  },
+  "resolutions": {
+    "tar": ">=4.4.2"
   }
 }
