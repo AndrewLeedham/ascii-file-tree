@@ -1,0 +1,26 @@
+
+language: node_js
+node_js:
+  - 'lts/*'
+cache: yarn
+
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - export PATH="$HOME/.yarn/bin:$PATH"
+
+script:
+  - yarn audit
+  - yarn lint
+
+branches:
+  only:
+    - master
+    - /^greenkeeper/.*$/
+
+deploy:
+  name: 'Publish to npm'
+  provider: script
+  script: yarn deploy
+  skip_cleanup: true
+  on:
+    branch: master
