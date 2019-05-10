@@ -1,0 +1,66 @@
+{
+  "name": "ascii-file-tree",
+  "version": "1.0.0",
+  "description": "Generate an ascii tree structure for a file glob pattern.",
+  "main": "index.js",
+  "repository": "git@github.com:AndrewLeedham/ascii-file-tree.git",
+  "author": "Andrew Leedham <AndrewLeedham@Outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "deploy": "semantic-release",
+    "prettier": "prettier \"index.{js,.d.ts}\"",
+    "lint": "yarn run prettier --check",
+    "format": "yarn run prettier --write"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint --env HUSKY_GIT_PARAMS"
+    }
+  },
+  "release": {
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "releaseRules": [
+            {
+              "type": "refactor",
+              "release": "patch"
+            }
+          ]
+        }
+      ],
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git"
+    ]
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "singleQuote": true,
+    "arrowParens": "always",
+    "endOfLine": "lf"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
+    "@semantic-release/changelog": "^3.0.2",
+    "@semantic-release/commit-analyzer": "^6.1.0",
+    "@semantic-release/git": "^7.0.8",
+    "@semantic-release/npm": "^5.1.4",
+    "@semantic-release/release-notes-generator": "^7.1.4",
+    "husky": "^1.3.1",
+    "prettier": "^1.16.4",
+    "semantic-release": "^15.13.3"
+  },
+  "dependencies": {
+    "ascii-tree": "^0.3.0",
+    "fast-glob": "^2.2.6"
+  }
+}
