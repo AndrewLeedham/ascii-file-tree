@@ -2,6 +2,13 @@ const tree = require('ascii-tree');
 const { sep, basename } = require('path');
 const fg = require('fast-glob');
 
+/**
+ * Checks if 2 arrays have value equality.
+ *
+ * @param {Array} array1 - First array.
+ * @param {Array} array2 - Second array.
+ * @returns Whether the arrays are equal.
+ */
 function arrayEqual(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
@@ -9,6 +16,13 @@ function arrayEqual(array1, array2) {
   return array1.every((item, index) => item === array2[index]);
 }
 
+/**
+ * Finds how much overlap there is at the start of 2 arrays.
+ *
+ * @param {Array} array1 - First array.
+ * @param {Array} array2 - Second array.
+ * @returns The amount of items in array1 that overlap (from the start) with array2.
+ */
 function findArrayOverlap(array1, array2) {
   for (let i = array1.length; i > 0; i--) {
     if (arrayEqual(array1.slice(0, i), array2.slice(0, i))) {
@@ -32,6 +46,15 @@ const forcedGlobOptions = {
   absolute: false,
   transform: null
 };
+
+/**
+ * Generates an ascii tree structure.
+ *
+ * @param {Object} options - Options to configure what is included in the generated tree.
+ * @param {Array} options.globs - An array of globs.
+ * @param {Object} options.globOptions - Options passed to {@link https://github.com/mrmlnc/fast-glob#options-1}.
+ * @returns {string} Ascii tree structure.
+ */
 function generate({
   globs = ['./**/*', '!node_modules', '!.git'],
   globOptions = {}
