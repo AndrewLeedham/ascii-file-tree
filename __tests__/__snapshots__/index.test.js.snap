@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generate branching 1`] = `
+" .
+├─ .gitignore
+├─ package.json
+└─ src
+   └─ one
+      ├─ one.js
+      ├─ two
+      │  └─ three
+      │     └─ three.js
+      └─ branch
+         └─ two
+            └─ two.js"
+`;
+
+exports[`generate control 1`] = `
+" .
+├─ .gitignore
+├─ package.json
+└─ src
+   └─ index.js"
+`;
+
+exports[`generate deep nesting 1`] = `
+" .
+├─ .gitignore
+├─ package.json
+└─ src
+   └─ really
+      └─ really
+         └─ deep
+            └─ nesting
+               ├─ other.js
+               └─ that
+                  └─ could
+                     └─ confuse
+                        └─ things
+                           └─ index.js"
+`;
+
+exports[`generate nesting 1`] = `
+" .
+├─ .gitignore
+├─ package.json
+└─ src
+   ├─ index.js
+   └─ __tests__
+      └─ index.test.js"
+`;

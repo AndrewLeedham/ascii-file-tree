@@ -1,0 +1,22 @@
+{
+  "control": [".gitignore", "package.json", "src/index.js"],
+  "nesting": [
+    ".gitignore",
+    "package.json",
+    "src/index.js",
+    "src/__tests__/index.test.js"
+  ],
+  "deepNesting": [
+    ".gitignore",
+    "package.json",
+    "src/really/really/deep/nesting/other.js",
+    "src/really/really/deep/nesting/that/could/confuse/things/index.js"
+  ],
+  "branching": [
+    ".gitignore",
+    "package.json",
+    "src/one/one.js",
+    "src/one/two/three/three.js",
+    "src/one/branch/two/two.js"
+  ]
+}
