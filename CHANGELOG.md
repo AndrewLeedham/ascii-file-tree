@@ -1,3 +1,20 @@
+# [1.1.0](https://github.com/AndrewLeedham/ascii-file-tree/compare/v1.0.1...v1.1.0) (2019-05-11)
+
+
+### Code Refactoring
+
+* glob -> globs + forced options ([fc55e34](https://github.com/AndrewLeedham/ascii-file-tree/commit/fc55e34))
+
+
+### Features
+
+* added cli ([30cc30e](https://github.com/AndrewLeedham/ascii-file-tree/commit/30cc30e))
+
+
+### BREAKING CHANGES
+
+* renamed glob option to globs
+
 ## [1.0.1](https://github.com/AndrewLeedham/ascii-file-tree/compare/v1.0.0...v1.0.1) (2019-05-11)
 
 
