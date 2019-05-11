@@ -1,7 +1,27 @@
 [![travisci status][travisci-badge]][travisci-link] [![npm package][npm-badge]][npm-link] [![license MIT][license-badge]][license] [![commit style angular][commit-style-badge]][commit-style-link] [![semantic-release][semantic-release-badge]][semantic-relase-link]
 
 # ascii-file-tree
-Generate an ascii tree structure for a file glob pattern.
+> Generate an ascii tree structure for a file glob pattern.
+
+E.g for this repo:
+```
+ .
+├─ .editorconfig
+├─ .gitignore
+├─ .travis.yml
+├─ CHANGELOG.md
+├─ LICENSE
+├─ README.md
+├─ index.js
+├─ package.json
+├─ yarn.lock
+└─ __tests__
+   ├─ index.test.js
+   ├─ __fixtures__
+   │  └─ globs.json
+   └─ __snapshots__
+      └─ index.test.js.snap
+```
 
 ## Usage
 - Install
@@ -21,10 +41,14 @@ console.log(aft.generate());
 ```
 
 ## API
-- `generate([options])` Generate a file structure string.
-  - `options`
-    - `options.glob` An array of globs e.g. `['./source/**/*.js', '!*.test.js']`. Default: `['./**/*', '!node_modules', '!.git']`.
-    - `options.globOptions` Options passed to fast-glob, see https://github.com/mrmlnc/fast-glob#options-1. Default: `{ dot: true }`.
+### `generate([options]): string`
+Generate a file structure string.
+
+#### options
+Name | Descriptions | Default
+--- | --- | ---
+glob (string[]) | An array of globs. | `['./source/**/*.js', '!*.test.js']`
+globOptions (Object) | Options passed to [fast-glob][fast-glob] | `{ dot: true }`
 
 ---
 
@@ -32,8 +56,8 @@ console.log(aft.generate());
 
 [license]: ./LICENSE
 [changelog]: ./CHANGELOG.md
-
 [issues]: https://github.com/AndrewLeedham/ascii-file-tree/issues
+[fast-glob]: https://github.com/mrmlnc/fast-glob#options-1
 
 [travisci-badge]: https://flat.badgen.net/travis/AndrewLeedham/ascii-file-tree
 [travisci-link]: https://travis-ci.org/AndrewLeedham/ascii-file-tree
