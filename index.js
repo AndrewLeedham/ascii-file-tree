@@ -9,8 +9,13 @@ function arrayEqual(array1, array2) {
   return array1.every((item, index) => item === array2[index]);
 }
 
-function arrayStartsWith(array, start) {
-  return arrayEqual(array.slice(0, start.length), start);
+function findArrayOverlap(array1, array2) {
+  for (let i = array1.length; i > 0; i--) {
+    if (arrayEqual(array1.slice(0, i), array2.slice(0, i))) {
+      return i;
+    }
+  }
+  return 0;
 }
 
 function generate({
@@ -26,16 +31,11 @@ function generate({
         const count = (name.match(new RegExp(sep, 'g')) || []).length;
         let out = '';
         let parts = name.split(sep).slice(0, -1);
-        if (
-          parts.length > 0 &&
-          arrayStartsWith(parts, previous) &&
-          parts.length !== previous.length
-        ) {
-          parts = parts.slice(previous.length);
-        }
-        if (parts.length > 0 && !arrayEqual(previous, parts) && count > 0) {
-          for (let index = 0; index < parts.length; index++) {
-            out += '#'.repeat(index + 2) + parts[index] + '\r\n';
+        const overlap = findArrayOverlap(parts, previous);
+        const relativeParts = overlap > 0 ? parts.slice(overlap) : parts;
+        if (relativeParts.length > 0 && !arrayEqual(previous, relativeParts) && count > 0) {
+          for (let index = 0; index < relativeParts.length; index++) {
+            out += '#'.repeat(overlap + index + 2) + relativeParts[index] + '\r\n';
           }
           depth = count;
         }
