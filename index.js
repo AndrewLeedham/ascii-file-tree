@@ -33,9 +33,14 @@ function generate({
         let parts = name.split(sep).slice(0, -1);
         const overlap = findArrayOverlap(parts, previous);
         const relativeParts = overlap > 0 ? parts.slice(overlap) : parts;
-        if (relativeParts.length > 0 && !arrayEqual(previous, relativeParts) && count > 0) {
+        if (
+          relativeParts.length > 0 &&
+          !arrayEqual(previous, relativeParts) &&
+          count > 0
+        ) {
           for (let index = 0; index < relativeParts.length; index++) {
-            out += '#'.repeat(overlap + index + 2) + relativeParts[index] + '\r\n';
+            out +=
+              '#'.repeat(overlap + index + 2) + relativeParts[index] + '\r\n';
           }
           depth = count;
         }
