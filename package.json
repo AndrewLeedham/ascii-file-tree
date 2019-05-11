@@ -2,6 +2,14 @@
   "name": "ascii-file-tree",
   "version": "1.1.0",
   "description": "Generate an ascii tree structure for a file glob pattern.",
+  "keywords": [
+    "ascii",
+    "file",
+    "tree",
+    "directory",
+    "structure",
+    "cli"
+  ],
   "main": "index.js",
   "repository": "git@github.com:AndrewLeedham/ascii-file-tree.git",
   "author": "Andrew Leedham <AndrewLeedham@Outlook.com>",
@@ -9,7 +17,7 @@
   "bin": "./cli.js",
   "scripts": {
     "deploy": "semantic-release",
-    "prettier": "prettier \"index.{js,.d.ts}\"",
+    "prettier": "prettier \"{.,__tests__}/*.{js,d.ts}\"",
     "lint": "yarn run prettier --check",
     "format": "yarn run prettier --write",
     "test": "jest"

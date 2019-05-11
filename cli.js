@@ -8,21 +8,26 @@ program
   .description(description)
   .version(version, '-v, --version')
   .arguments('[globs...]')
-  .option('-c, --cwd <path>', 'the current working directory to search (default: process.cwd())')
+  .option('-p, --path', 'display root path instead of "."')
+  .option(
+    '-c, --cwd <path>',
+    'the current working directory to search (default: process.cwd())'
+  )
   .option('-d, --deep <n>', 'only traverse n levels deep', parseInt)
-  .option('-i, --ignore <globs>', 'exclude matches with an array of glob patterns')
+  .option(
+    '-i, --ignore <globs>',
+    'exclude matches with an array of glob patterns'
+  )
   .option(
     '-D, --no-dot',
     'exclude matches with directory or file names that start with a dot'
   )
-  .option('-F, --no-follow', "exclude symlinks")
-  .option(
-    '-C, --no-case',
-    'disable case-insensitive matching'
-  )
+  .option('-F, --no-follow', 'exclude symlinks')
+  .option('-C, --no-case', 'disable case-insensitive matching')
   .action((globs, command) => {
     const ignore = command.ignore ? command.ignore.split(',') : [];
     const options = {
+      path: !!command.path,
       globs: globs.length > 0 ? globs : undefined,
       globOptions: {
         cwd: command.cwd === undefined ? process.cwd() : command.cwd,
@@ -37,4 +42,3 @@ program
     console.log(output);
   })
   .parse(process.argv);
-

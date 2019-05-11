@@ -1,7 +1,7 @@
 declare namespace AsciiFileTree {
   interface Options {
-    globs?: string[],
-    globOptions: FastGlob.Options
+    globs?: string[];
+    globOptions?: FastGlob.Options;
   }
   /**
    * Generates an ascii tree structure.
