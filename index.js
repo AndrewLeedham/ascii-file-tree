@@ -51,11 +51,13 @@ const forcedGlobOptions = {
  * Generates an ascii tree structure.
  *
  * @param {Object} options - Options to configure what is included in the generated tree.
+ * @param {Boolean} options.path - Whether to display the root path instead of ".".
  * @param {Array} options.globs - An array of globs.
  * @param {Object} options.globOptions - Options passed to {@link https://github.com/mrmlnc/fast-glob#options-1}.
  * @returns {string} Ascii tree structure.
  */
 function generate({
+  path = false,
   globs = ['./**/*', '!node_modules', '!.git'],
   globOptions = {}
 } = {}) {
@@ -66,8 +68,9 @@ function generate({
   };
   const files = fg.sync(globs, globOptions);
   let previous = [];
+  const root = path ? globOptions.cwd : '.';
   const input =
-    '# .\r\n' +
+    `#${root}\r\n` +
     files
       .map((name) => {
         const count = (name.match(new RegExp(sep, 'g')) || []).length;

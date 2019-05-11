@@ -6,7 +6,7 @@
 
 E.g for this repo:
 ```
- .
+.
 ├─ .editorconfig
 ├─ .gitignore
 ├─ .travis.yml
@@ -46,6 +46,7 @@ Generate an ascii tree structure for a file glob pattern.
 
 Options:
   -v, --version         output the version number
+  -p, --path            display root path instead of "."
   -c, --cwd <path>      the current working directory to search (default: process.cwd())
   -d, --deep <n>        only traverse n levels deep
   -i, --ignore <globs>  exclude matches with an array of glob patterns
@@ -79,6 +80,7 @@ Returns the generated file structure string.
 #### options
 Name | Descriptions | Default
 --- | --- | ---
+path (boolean) | Whether to display the root path instead of "." | `false`
 glob (string[]) | An array of globs. | `['./source/**/*.js', '!*.test.js']`
 globOptions (Object) | Options passed to [fast-glob][fast-glob] | `{ dot: true }`
 

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`generate branching 1`] = `
-" .
+".
 ├─ .gitignore
 ├─ package.json
 └─ src
@@ -16,7 +16,7 @@ exports[`generate branching 1`] = `
 `;
 
 exports[`generate control 1`] = `
-" .
+".
 ├─ .gitignore
 ├─ package.json
 └─ src
@@ -24,7 +24,7 @@ exports[`generate control 1`] = `
 `;
 
 exports[`generate deep nesting 1`] = `
-" .
+".
 ├─ .gitignore
 ├─ package.json
 └─ src
@@ -41,11 +41,19 @@ exports[`generate deep nesting 1`] = `
 `;
 
 exports[`generate nesting 1`] = `
-" .
+".
 ├─ .gitignore
 ├─ package.json
 └─ src
    ├─ index.js
    └─ __tests__
       └─ index.test.js"
+`;
+
+exports[`generate path 1`] = `
+"/path/to/
+├─ .gitignore
+├─ package.json
+└─ src
+   └─ index.js"
 `;
