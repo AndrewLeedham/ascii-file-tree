@@ -1,6 +1,9 @@
 [![travisci status][travisci-badge]][travisci-link] [![npm package][npm-badge]][npm-link] [![license MIT][license-badge]][license] [![commit style angular][commit-style-badge]][commit-style-link] [![semantic-release][semantic-release-badge]][semantic-relase-link]
 
 # ascii-file-tree
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/AndrewLeedham/ascii-file-tree.svg)](https://greenkeeper.io/)
+
 > Generate an ascii tree structure for a file glob pattern.
 
 E.g for this repo:
