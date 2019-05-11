@@ -6,6 +6,7 @@
   "repository": "git@github.com:AndrewLeedham/ascii-file-tree.git",
   "author": "Andrew Leedham <AndrewLeedham@Outlook.com>",
   "license": "MIT",
+  "bin": "./cli.js",
   "scripts": {
     "deploy": "semantic-release",
     "prettier": "prettier \"index.{js,.d.ts}\"",
@@ -63,6 +64,7 @@
   },
   "dependencies": {
     "ascii-tree": "^0.3.0",
+    "commander": "^2.20.0",
     "fast-glob": "^2.2.6"
   },
   "resolutions": {

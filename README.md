@@ -24,13 +24,44 @@ E.g for this repo:
 ```
 
 ## Usage
-- Install
+### CLI
+The simplest way to use `ascii-file-tree` is to just run it with npx. It will output a tree representing your current working directory.
+```bash
+npx ascii-file-tree
+```
+Alternatively install it globally, so npx doesn't have to download it everytime.
+```bash
+yarn global add ascii-file-tree
+# or
+npm install ascii-file-tree --global
+# then run it with just
+ascii-file-tree
+```
+There are a few options you can pass to the CLI.
+```
+Usage: ascii-file-tree [options] [globs...]
+
+Generate an ascii tree structure for a file glob pattern.
+
+Options:
+  -v, --version         output the version number
+  -c, --cwd <path>      the current working directory to search (default: process.cwd())
+  -d, --deep <n>        only traverse n levels deep
+  -i, --ignore <globs>  exclude matches with an array of glob patterns
+  -D, --no-dot          exclude matches with directory or file names that start with a dot
+  -F, --no-follow       exclude symlinks
+  -C, --no-case         disable case-insensitive matching
+  -h, --help            output usage information
+```
+
+### JavaScript
+Install `ascii-file-tree` locally and save it as a dependency.
 ```bash
 yarn add ascii-file-tree
 # or
 npm install ascii-file-tree --save
 ```
-- Import and use
+Import it into your project, and call the generate function.
 ```javascript
 const aft = require('ascii-file-tree');
 // or
@@ -41,8 +72,8 @@ console.log(aft.generate());
 ```
 
 ## API
-### `generate([options]): string`
-Generate a file structure string.
+### `generate([options])`
+Returns the generated file structure string.
 
 #### options
 Name | Descriptions | Default
