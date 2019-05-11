@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/AndrewLeedham/ascii-file-tree/compare/v1.1.0...v1.2.0) (2019-05-11)
+
+
+### Features
+
+* added path option ([fcabe8a](https://github.com/AndrewLeedham/ascii-file-tree/commit/fcabe8a))
+
 # [1.1.0](https://github.com/AndrewLeedham/ascii-file-tree/compare/v1.0.1...v1.1.0) (2019-05-11)
 
 
