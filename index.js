@@ -18,11 +18,30 @@ function findArrayOverlap(array1, array2) {
   return 0;
 }
 
+const defaultGlobOptions = {
+  dot: true
+};
+
+// fast-glob options that can break things, so shouldn't be configurable.
+const forcedGlobOptions = {
+  stats: false,
+  onlyFiles: true,
+  onlyDirectories: false,
+  unique: true,
+  markDirectories: false,
+  absolute: false,
+  transform: null
+};
 function generate({
-  glob = ['./**/*', '!node_modules', '!.git'],
-  globOptions = { dot: true }
+  globs = ['./**/*', '!node_modules', '!.git'],
+  globOptions = {}
 } = {}) {
-  const files = fg.sync(glob, globOptions);
+  globOptions = {
+    ...defaultGlobOptions,
+    ...globOptions,
+    ...forcedGlobOptions
+  };
+  const files = fg.sync(globs, globOptions);
   let previous = [];
   const input =
     '# .\r\n' +
