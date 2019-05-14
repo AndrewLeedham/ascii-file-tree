@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/AndrewLeedham/ascii-file-tree/compare/v1.2.0...v1.2.1) (2019-05-14)
+
+
+### Bug Fixes
+
+* windows seperators ([29163cf](https://github.com/AndrewLeedham/ascii-file-tree/commit/29163cf))
+
 # [1.2.0](https://github.com/AndrewLeedham/ascii-file-tree/compare/v1.1.0...v1.2.0) (2019-05-11)
 
 
