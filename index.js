@@ -1,5 +1,5 @@
 const tree = require('ascii-tree');
-const { sep, basename } = require('path');
+const { basename } = require('path');
 const fg = require('fast-glob');
 
 /**
@@ -73,9 +73,9 @@ function generate({
     `#${root}\r\n` +
     files
       .map((name) => {
-        const count = (name.match(new RegExp(sep, 'g')) || []).length;
+        const count = (name.match(/\//g) || []).length;
         let out = '';
-        let parts = name.split(sep).slice(0, -1);
+        let parts = name.split('/').slice(0, -1);
         const overlap = findArrayOverlap(parts, previous);
         const relativeParts = overlap > 0 ? parts.slice(overlap) : parts;
         if (
