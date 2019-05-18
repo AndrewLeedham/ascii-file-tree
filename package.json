@@ -63,7 +63,7 @@
     "@semantic-release/changelog": "^3.0.2",
     "@semantic-release/commit-analyzer": "^6.1.0",
     "@semantic-release/git": "^7.0.8",
-    "@semantic-release/npm": "^5.1.4",
+    "@semantic-release/npm": "^5.1.7",
     "@semantic-release/release-notes-generator": "^7.1.4",
     "husky": "^2.2.0",
     "jest": "^24.8.0",
@@ -76,6 +76,7 @@
     "fast-glob": "^2.2.6"
   },
   "resolutions": {
-    "tar": ">=4.4.2"
+    "tar": ">=4.4.2",
+    "fstream": ">=1.0.12"
   }
 }
