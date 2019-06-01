@@ -1,6 +1,6 @@
 {
   "name": "ascii-file-tree",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Generate an ascii tree structure for a file glob pattern.",
   "keywords": [
     "ascii",
