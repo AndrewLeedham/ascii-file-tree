@@ -2,7 +2,7 @@
 
 > Generate an ascii tree structure for a file glob pattern.
 
-[![travisci status][travisci-badge]][travisci-link] [![npm package][npm-badge]][npm-link] [![license MIT][license-badge]][license] [![commit style angular][commit-style-badge]][commit-style-link] [![semantic-release][semantic-release-badge]][semantic-release-link] [![Greenkeeper badge][greenkeeper-badge]][greenkeeper-link]
+[![travisci status][travisci-badge]][travisci-link] [![npm package][npm-badge]][npm-link] [![license MIT][license-badge]][license] [![commit style angular][commit-style-badge]][commit-style-link] [![semantic-release][semantic-release-badge]][semantic-release-link] [![Dependabot Status][dependabot-badge]][dependabot-link]
 
 E.g for this repo:
 ```
@@ -107,5 +107,5 @@ globOptions (Object) | Options passed to [fast-glob][fast-glob] | `{ dot: true }
 [semantic-release-badge]: https://flat.badgen.net/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80/semantic%20release/e10079
 [semantic-release-link]: https://github.com/semantic-release/semantic-release
 
-[greenkeeper-badge]: https://badges.greenkeeper.io/AndrewLeedham/ascii-file-tree.svg?style=flat-square
-[greenkeeper-link]: https://greenkeeper.io/
+[dependabot-badge]: https://api.dependabot.com/badges/status?host=github&repo=AndrewLeedham/ascii-file-tree
+[dependabot-link]: https://dependabot.com
