@@ -63,7 +63,7 @@
   "dependencies": {
     "ascii-tree": "^0.3.0",
     "commander": "^2.20.0",
-    "fast-glob": "^2.2.6"
+    "fast-glob": "^3.0.4"
   },
   "resolutions": {
     "tar": ">=4.4.2",
