@@ -1,3 +1,5 @@
+## Archived in favour of built in tree command, was not aware of it when I built this...
+
 # ascii-file-tree
 
 > Generate an ascii tree structure for a file glob pattern.
